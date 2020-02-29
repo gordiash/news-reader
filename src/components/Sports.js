@@ -9,10 +9,11 @@ export default function Sports(props) {
   const category = props.location.state.category
 
   useEffect(() => {
-    getHeadlines("pl", category).then(
-      ({ data }) => data.articles && setArticles(data.articles)
-    );
-  });
+    if (data !==[]) {
+      getHeadlines("pl", category).then(
+        ({ data }) => data.articles && setArticles(data.articles));
+    }
+  }, [category]);
 
 
 

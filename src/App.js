@@ -1,6 +1,7 @@
 import React from "react";
-import { Switch, Route, Link } from "react-router-dom";
+import { Switch, Route, NavLink } from "react-router-dom";
 
+import CountryList from "./components/CountryList";
 import General from "./components/General";
 import Business from "./components/Business";
 import Health from "./components/Health";
@@ -15,8 +16,7 @@ class App extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      articles: [],
-      business: false
+     
     };
   }
 
@@ -24,87 +24,90 @@ class App extends React.Component {
     return (
       <React.Fragment>
         <header className="container-fluid px-0">
-          <nav className="navbar navbar-dark bg-dark fixed-top">
+          <nav className="navbar navbar-dark bg-dark fixed-top d-flex flex-wrap align-items-center">
 
-              <ul className="navbar-nav container-fluid d-flex flex-column flex-md-row justify-content-between">
-                <Link
-                  className="nav-link"
-                  to={{
-                    pathname: "/general",
-                    state: {
-                      category: "general"
-                    }
-                  }}
-                >
-                  General
-                </Link>
-                <Link
-                  className="nav-link"
-                  to={{
-                    pathname: "/business",
-                    state: {
-                      category: "business"
-                    }
-                  }}
-                >
-                  Business
-                </Link>
-                <Link
-                  className="nav-link"
-                  to={{
-                    pathname: "/health",
-                    state: {
-                      category: "health"
-                    }
-                  }}
-                >
-                  Health
-                </Link>
-                <Link
-                  className="nav-link"
-                  to={{
-                    pathname: "/entertainment",
-                    state: {
-                      category: "entertainment"
-                    }
-                  }}
-                >
-                  Entertainment
-                </Link>
-                <Link
-                  className="nav-link"
-                  to={{
-                    pathname: "/science",
-                    state: {
-                      category: "science"
-                    }
-                  }}
-                >
-                  Science
-                </Link>
-                <Link
-                  className="nav-link"
-                  to={{
-                    pathname: "/sports",
-                    state: {
-                      category: "sports"
-                    }
-                  }}
-                >
-                  Sports
-                </Link>
-                <Link
-                  className="nav-link"
-                  to={{
-                    pathname: "/technology",
-                    state: {
-                      category: "technology"
-                    }
-                  }}
-                >
-                  Technology
-                </Link>
-              </ul>
+          <CountryList />
+
+            <ul className="navbar-nav container-fluid w-75 d-flex flex-wrap flex-row flex-md-row justify-content-center">
+
+              <NavLink
+                className="nav-link mr-3"
+                to={{
+                  pathname: "/general",
+                  state: {
+                    category: "general"
+                  }
+                }}
+              >
+                General
+              </NavLink>
+              <NavLink
+                className="nav-link mr-3"
+                to={{
+                  pathname: "/business",
+                  state: {
+                    category: "business"
+                  }
+                }}
+              >
+                Business
+              </NavLink>
+              <NavLink
+                className="nav-link mr-3"
+                to={{
+                  pathname: "/health",
+                  state: {
+                    category: "health"
+                  }
+                }}
+              >
+                Health
+              </NavLink>
+              <NavLink
+                className="nav-link mr-3"
+                to={{
+                  pathname: "/entertainment",
+                  state: {
+                    category: "entertainment"
+                  }
+                }}
+              >
+                Entertainment
+              </NavLink>
+              <NavLink
+                className="nav-link mr-3"
+                to={{
+                  pathname: "/science",
+                  state: {
+                    category: "science"
+                  }
+                }}
+              >
+                Science
+              </NavLink>
+              <NavLink
+                className="nav-link mr-3"
+                to={{
+                  pathname: "/sports",
+                  state: {
+                    category: "sports"
+                  }
+                }}
+              >
+                Sports
+              </NavLink>
+              <NavLink
+                className="nav-link"
+                to={{
+                  pathname: "/technology",
+                  state: {
+                    category: "technology"
+                  }
+                }}
+              >
+                Technology
+              </NavLink>
+            </ul>
           </nav>
         </header>
 

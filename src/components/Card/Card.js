@@ -12,9 +12,10 @@ export default function Card(props) {
                 </a>
               </h4>
             </div>
-            <img src={article.urlToImage} className="card-img" alt="image"></img>
-            <div className="card-body">
-              <p className="card-text">{article.description}</p>
+            
+            <div className="card-body d-flex align-content-center">
+            <img src={article.urlToImage} className="w-50 h-75" alt="image"></img>
+              <p className="card-text align-self-center ml-2"><strong>{article.description}</strong></p>
             </div>
           </div>
         ))}

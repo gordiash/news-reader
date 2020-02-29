@@ -6,18 +6,16 @@ import CardsContainer from "../containers/CardsContainer";
 export default function General(props) {
   let [data, setArticles] = useState([]);
 
-  let category = props.location.state.category
+  let category = props.location.state.category;
 
   useEffect(() => {
-
-
+    if (data !==[]) {
       getHeadlines("pl", category).then(
-        ({ data }) => data.articles && setArticles(data.articles)
-      );
-    
-  });
+        ({ data }) => data.articles && setArticles(data.articles));
+    }
+  }, [category]);
 
-
+console.log(data)
 
   return (
     <CardsContainer>
