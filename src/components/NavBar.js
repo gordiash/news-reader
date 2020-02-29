@@ -14,7 +14,7 @@ export default function NavBar(props) {
             language={props.language}
           />
 
-          <ul className="navbar-nav container-fluid w-75 d-flex flex-wrap flex-row flex-md-row justify-content-center">
+          <ul className="navbar-nav container-fluid w-75 d-flex flex-wrap flex-column flex-md-row justify-content-center">
             <NavLink
               className="nav-link mr-3"
               to={{

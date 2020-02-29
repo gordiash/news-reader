@@ -8,7 +8,7 @@ const baseURL = "http://newsapi.org/v2/";
 export const getHeadlines = async (country, category) => {
 
 
-  const topHeadlinesURL =`${baseURL}top-headlines?country=${country}&category=${category}&` + KEY
+  const topHeadlinesURL =`${baseURL}top-headlines?pageSize=10&country=${country}&category=${category}&` + KEY
    
 
   const result = await axios
