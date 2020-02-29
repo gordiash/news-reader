@@ -14,7 +14,7 @@ export default function Card(props) {
             </div>
             
             <div className="card-body d-flex align-content-center">
-            <img src={article.urlToImage} className="w-50 h-75" alt="image"></img>
+            <img src={article.urlToImage} className="w-50 h-50 mx-auto my-auto d-block" alt="image"></img>
               <p className="card-text align-self-center ml-2"><strong>{article.description}</strong></p>
             </div>
           </div>

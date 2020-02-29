@@ -5,14 +5,15 @@ const list =
 const listArray = list.split(" ");
 
 
-export default function CountryList() {
+export default function CountryList(props) {
   
 
   return (
     <React.Fragment>
-      <div className="form-group mr-4 col-1 col-sm-1">
-        <select className="form-control form-control-sm" id="CountryList">
-          <option selected>Select language</option>
+      <div className="form-group mr-4 col-1 col-sm-2">
+      <label>Select Language:</label>
+      <select value={props.language} className="form-control form-control-sm col-4" id="CountryList" onChange={props.selectedLanguage}>
+        <option  value={props.language}>{props.language}</option>
           {listArray.map(country => (
             <option key={country} value={country}>{country}</option>
           ))}

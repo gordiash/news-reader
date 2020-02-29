@@ -7,15 +7,16 @@ export default function General(props) {
   let [data, setArticles] = useState([]);
 
   let category = props.location.state.category;
+  let language = props.location.state.language;
 
   useEffect(() => {
     if (data !==[]) {
-      getHeadlines("pl", category).then(
+      getHeadlines(language, category).then(
         ({ data }) => data.articles && setArticles(data.articles));
     }
-  }, [category]);
+  }, [category, language]);
 
-console.log(data)
+
 
   return (
     <CardsContainer>
