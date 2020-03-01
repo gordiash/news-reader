@@ -99,6 +99,18 @@ export default function NavBar(props) {
             >
               Technology
             </NavLink>
+
+            <NavLink
+              className="nav-link"
+              to={{
+                pathname: "/weather",
+                state: {
+                  city: props.city
+                }
+              }}
+            >
+              Weather
+            </NavLink>
           </ul>
         </nav>
       </header>

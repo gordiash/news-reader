@@ -3,12 +3,14 @@ import { Switch, Route } from "react-router-dom";
 
 import NavBar from "./components/NavBar";
 import General from "./components/General";
+import Weather from "./components/Weather"
 
 import "./App.css";
 
 export default function App() {
   let [selectedLanguage, setSelectedLanguage] = useState("gb");
   let [perPage, setPerPage] = useState();
+  let [city, setCity] = useState("London");
 
   const selectedLanguageHandler = e => {
     setSelectedLanguage(e.target.value);
@@ -17,6 +19,10 @@ export default function App() {
   const selectedPerPage = e => {
     setPerPage(e.target.value);
   };
+
+  // const getCity =e=>{
+  //   setCity(e.target.value)
+  // }
 
   return (
     <React.Fragment>
@@ -95,6 +101,16 @@ export default function App() {
               {...props}
               selectedPerPage={selectedPerPage}
               perPage={perPage}
+            />
+          )}
+        />
+        <Route
+          path="/weather"
+          render={props => (
+            <Weather
+              {...props}
+              // getCity={getCity}
+              city={city}
             />
           )}
         />

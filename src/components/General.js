@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import getHeadlines from "../API/ApiRequest";
+import {getHeadlines} from "../API/ApiRequest";
 import Card from "../components/Card/Card";
 import CardsContainer from "../containers/CardsContainer";
 import NewsOnPage from './NewsOnPage'
@@ -11,7 +11,6 @@ export default function General(props) {
   let language = props.location.state.language;
   let perPage = props.perPage
 
-  console.log(props.location)
 
   useEffect(() => {
     if (news !==[]) {
