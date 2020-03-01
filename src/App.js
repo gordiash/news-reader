@@ -1,47 +1,104 @@
-import React from "react";
+import React, { useState } from "react";
 import { Switch, Route } from "react-router-dom";
 
 import NavBar from "./components/NavBar";
 import General from "./components/General";
 
-
 import "./App.css";
 
-class App extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-     selectedLanguage:""||"gb"
-    };
-  }
+export default function App() {
+  let [selectedLanguage, setSelectedLanguage] = useState("gb");
+  let [perPage, setPerPage] = useState();
 
-  selectedLanguageHandler=(e)=>{
-    this.setState({
-      selectedLanguage:e.target.value
-    })
-  }
+  const selectedLanguageHandler = e => {
+    setSelectedLanguage(e.target.value);
+  };
 
-  render() {
-console.log(this.state.selectedLanguage)
+  const selectedPerPage = e => {
+    setPerPage(e.target.value);
+  };
 
-    return (
-      <React.Fragment>
-       <NavBar selectedLanguageHandler={this.selectedLanguageHandler}
-         language={this.state.selectedLanguage}
-       />
+  return (
+    <React.Fragment>
+      <NavBar
+        selectedLanguageHandler={selectedLanguageHandler}
+        language={selectedLanguage}
+        selectedPerPage={selectedPerPage}
+        perPage={perPage}
+      />
 
-        <Switch>
-          <Route path="/general" component={General} />
-          <Route path="/business" component={General} />
-          <Route path="/health" component={General} />
-          <Route path="/entertainment" component={General} />
-          <Route path="/science" component={General} />
-          <Route path="/sports" component={General} />
-          <Route path="/technology" component={General} />
-        </Switch>
-      </React.Fragment>
-    );
-  }
+      <Switch>
+        <Route
+          path="/general"
+          render={props => (
+            <General
+              {...props}
+              selectedPerPage={selectedPerPage}
+              perPage={perPage}
+            />
+          )}
+        />
+        <Route
+          path="/business"
+          render={props => (
+            <General
+              {...props}
+              selectedPerPage={selectedPerPage}
+              perPage={perPage}
+            />
+          )}
+        />
+        <Route
+          path="/health"
+          render={props => (
+            <General
+              {...props}
+              selectedPerPage={selectedPerPage}
+              perPage={perPage}
+            />
+          )}
+        />
+        <Route
+          path="/entertainment"
+          render={props => (
+            <General
+              {...props}
+              selectedPerPage={selectedPerPage}
+              perPage={perPage}
+            />
+          )}
+        />
+        <Route
+          path="/science"
+          render={props => (
+            <General
+              {...props}
+              selectedPerPage={selectedPerPage}
+              perPage={perPage}
+            />
+          )}
+        />
+        <Route
+          path="/sports"
+          render={props => (
+            <General
+              {...props}
+              selectedPerPage={selectedPerPage}
+              perPage={perPage}
+            />
+          )}
+        />
+        <Route
+          path="/technology"
+          render={props => (
+            <General
+              {...props}
+              selectedPerPage={selectedPerPage}
+              perPage={perPage}
+            />
+          )}
+        />
+      </Switch>
+    </React.Fragment>
+  );
 }
-
-export default App;

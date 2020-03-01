@@ -7,3 +7,7 @@
 .card-title a:hover{
     color: darkcyan;
 }
+
+#perPage label{
+    color:black;
+}
