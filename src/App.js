@@ -8,8 +8,7 @@ import "./App.css";
 
 export default function App() {
   let [selectedLanguage, setSelectedLanguage] = useState("gb");
-  let [perPage, setPerPage] = useState();
-  let [city, setCity] = useState("London");
+  let [perPage, setPerPage] = useState(10);
 
   const selectedLanguageHandler = e => {
     setSelectedLanguage(e.target.value);
@@ -19,17 +18,12 @@ export default function App() {
     setPerPage(e.target.value);
   };
 
-  // const getCity =e=>{
-  //   setCity(e.target.value)
-  // }
-
+ 
   return (
     <React.Fragment>
       <NavBar
         selectedLanguageHandler={selectedLanguageHandler}
         language={selectedLanguage}
-        selectedPerPage={selectedPerPage}
-        perPage={perPage}
       />
 
       <Switch>
