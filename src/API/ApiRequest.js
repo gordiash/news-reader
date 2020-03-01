@@ -2,7 +2,7 @@ import axios from "axios";
 
 const KEY = "apiKey=925379af6d9e4229a6988be6c6c836fa";
 
-const baseURL = "http://newsapi.org/v2/";
+const baseURL = "https://newsapi.org/v2/";
 
 const getHeadlines = async (country, category, perPage) => {
   const topHeadlinesURL =

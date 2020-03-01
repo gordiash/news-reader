@@ -3,7 +3,6 @@ import { Switch, Route } from "react-router-dom";
 
 import NavBar from "./components/NavBar";
 import General from "./components/General";
-import Weather from "./components/Weather"
 
 import "./App.css";
 
