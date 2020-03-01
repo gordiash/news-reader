@@ -104,16 +104,7 @@ export default function App() {
             />
           )}
         />
-        <Route
-          path="/weather"
-          render={props => (
-            <Weather
-              {...props}
-              // getCity={getCity}
-              city={city}
-            />
-          )}
-        />
+       
       </Switch>
     </React.Fragment>
   );
