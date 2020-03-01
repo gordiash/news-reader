@@ -7,8 +7,8 @@ export default function Card(props) {
     return (
         <React.Fragment>
             {props.data.map(article => (
-
-          <div key={article.title} className="card my-3 mx-3 col-11 col-sm-5 text-center p-0">
+<div className=" col-12 col-sm-3 mx-3 mt-5">
+          <div key={article.title} className="card text-center p-0">
             <div className="card-header">
               <h4 key={article.title} className="card-title">
                 <a href={article.url}>
@@ -24,6 +24,7 @@ export default function Card(props) {
             
               <p className="d-block text-justify p-3 "><strong>{article.description}</strong></p>
             </div>
+          </div>
           </div>
         ))}
 
