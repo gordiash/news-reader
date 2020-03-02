@@ -27,23 +27,29 @@ export default function App() {
       />
 
       <Switch>
-        <Route
-          path="/general"
+      <Route
+          path="/" exact
           render={props => (
             <General
               {...props}
+              category="general"
               selectedPerPage={selectedPerPage}
               perPage={perPage}
+              language={selectedLanguage}
+            
             />
           )}
         />
+      
         <Route
           path="/business"
           render={props => (
             <General
               {...props}
+              category="business"
               selectedPerPage={selectedPerPage}
               perPage={perPage}
+              language={selectedLanguage}
             />
           )}
         />
@@ -52,8 +58,10 @@ export default function App() {
           render={props => (
             <General
               {...props}
+              category="health"
               selectedPerPage={selectedPerPage}
               perPage={perPage}
+              language={selectedLanguage}
             />
           )}
         />
@@ -62,8 +70,10 @@ export default function App() {
           render={props => (
             <General
               {...props}
+              category="entertainment"
               selectedPerPage={selectedPerPage}
               perPage={perPage}
+              language={selectedLanguage}
             />
           )}
         />
@@ -72,8 +82,10 @@ export default function App() {
           render={props => (
             <General
               {...props}
+              category="science"
               selectedPerPage={selectedPerPage}
               perPage={perPage}
+              language={selectedLanguage}
             />
           )}
         />
@@ -82,8 +94,10 @@ export default function App() {
           render={props => (
             <General
               {...props}
+              category="sports"
               selectedPerPage={selectedPerPage}
               perPage={perPage}
+              language={selectedLanguage}
             />
           )}
         />
@@ -92,8 +106,10 @@ export default function App() {
           render={props => (
             <General
               {...props}
+              category="technology"
               selectedPerPage={selectedPerPage}
               perPage={perPage}
+              language={selectedLanguage}
             />
           )}
         />

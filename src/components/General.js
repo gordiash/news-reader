@@ -7,8 +7,8 @@ import NewsOnPage from './NewsOnPage'
 export default function General(props) {
   let [news, setArticles] = useState([]);
 
-  let category = props.location.state.category;
-  let language = props.location.state.language;
+  let category = props.category;
+  let language = props.language;
   let perPage = props.perPage
 
 
@@ -29,8 +29,8 @@ export default function General(props) {
   perPage={props.perPage}
 />
 
+  <Card data={news} />
 
-      <Card data={news} />
     </CardsContainer>
   );
 }

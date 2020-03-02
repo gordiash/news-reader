@@ -10,9 +10,9 @@ export default function CountryList(props) {
 
   return (
     
-      <div className="form-group mr-4 col-10 col-sm-3 m-0 p-0">
+      <div className="form-group mr-4 col-8 col-sm-1 m-0 p-0 d-flex justify-content-center align-items-center float-right">
       <label>Select Country:</label>
-      <select value={props.language} className="form-control form-control-sm col-4" id="CountryList" onChange={props.selectedLanguage}>
+      <select value={props.language} className="form-control form-control-sm col-4 col-sm-6 ml-3" id="CountryList" onChange={props.selectedLanguage}>
         <option  value={props.language}>{props.language}</option>
           {listArray.map(country => (
             <option key={country} value={country}>{country}</option>
