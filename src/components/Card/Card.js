@@ -19,10 +19,10 @@ export default function Card(props) {
             
             <div className="card-body d-flex flex-wrap p-0">
             <div className="w-100 d-flex justify-content-center ">
-            <img src={article.urlToImage} className="w-100 h-100" alt="imageAPI"></img>
+            <img src={article.urlToImage || "https://picsum.photos/300/150"} className="w-100 h-100" alt="imageAPI"></img>
             </div>
             
-              <p className="d-block text-justify p-3 "><strong>{article.description}</strong></p>
+              <p className="d-block text-justify p-3 "><strong>{article.description || "Reade more..."}</strong></p>
             </div>
           </div>
           </div>
